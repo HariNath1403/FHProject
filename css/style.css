@@ -40,7 +40,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  position: relative; }
+  position: relative;
+  overflow-y: scroll; }
   .dashboard__greeting {
     text-align: center;
     text-transform: uppercase;
@@ -133,7 +134,7 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
   .dashboard__cta {
     margin: 1.8rem;
-    transform: translateY(-75%); }
+    transform: translateY(-25%); }
     .dashboard__cta--btn {
       text-align: center;
       text-transform: uppercase;
