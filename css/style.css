@@ -132,7 +132,8 @@ body {
     background-color: #bf3641;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
   .dashboard__cta {
-    margin: 1.8rem; }
+    margin: 1.8rem;
+    transform: translateY(-75%); }
     .dashboard__cta--btn {
       text-align: center;
       text-transform: uppercase;
@@ -476,7 +477,9 @@ body {
 #admin {
   z-index: 3;
   transition: all 0.4s;
-  opacity: 0; }
+  opacity: 0;
+  overflow-y: scroll;
+  border: none !important; }
 
 .admin {
   padding: 7.2rem 3.6rem 5.6rem;

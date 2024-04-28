@@ -2,6 +2,8 @@
   z-index: 3;
   transition: all 0.4s;
   opacity: 0;
+  overflow-y: scroll;
+  border: none !important;
 }
 .admin {
   padding: $space-decent $space-gap $space-margin;
