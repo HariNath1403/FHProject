@@ -1,0 +1,17 @@
+{
+  "name": "fh-project",
+  "version": "1.0.0",
+  "description": "landing page",
+  "default": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Hari",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

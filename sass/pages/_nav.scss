@@ -1,0 +1,90 @@
+.container {
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-167.5%);
+  opacity: 0;
+  pointer-events: none;
+  width: calc(#{$max-width} * 0.75);
+  // width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &__page {
+    position: relative;
+    background-color: rgba($color-main, 0.9);
+  }
+
+  &__logo {
+    width: calc(#{$space-big} * 2.5);
+    height: auto;
+    margin: 0 auto;
+
+    &--img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    margin-top: $space-sub;
+    display: flex;
+    flex-direction: column;
+    gap: $space-standard;
+    text-transform: uppercase;
+    font-size: calc(#{$text-emphasize + $text-standard}/ 2);
+    font-weight: 500;
+    color: $color-background;
+    list-style: none;
+  }
+
+  &__row {
+    margin-left: $space-small;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: $space-widegap;
+    left: 20%;
+    transform: translateX(-10%);
+
+    &--text {
+      text-align: center;
+      color: $color-background;
+      font-size: $text-small;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+
+  &__exit {
+    position: absolute;
+    top: $space-sub;
+    right: $space-sub;
+
+    &--btn {
+      font-size: $text-emphasize;
+      font-weight: 700;
+      color: $color-main;
+      background-color: $color-background;
+      padding: $space-supersmall $space-mini;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.075);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

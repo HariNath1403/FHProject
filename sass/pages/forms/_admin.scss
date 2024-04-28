@@ -1,0 +1,95 @@
+#admin {
+  z-index: 3;
+  transition: all 0.4s;
+  opacity: 0;
+}
+.admin {
+  padding: $space-decent $space-gap $space-margin;
+  display: flex;
+  flex-direction: column;
+  gap: $space-margin;
+
+  &__box {
+    background-color: $color-main;
+    color: $color-background;
+  }
+
+  &__form {
+    padding: $space-small;
+    display: flex;
+    flex-direction: column;
+    gap: $space-small;
+
+    &--header {
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-accent;
+      font-size: calc(#{$text-header-sub + $text-big}/ 2);
+      font-weight: 900;
+      letter-spacing: 2.4px;
+      transform: skewX(-15deg);
+      margin-bottom: $space-sub;
+    }
+
+    &--row {
+      display: flex;
+      align-items: center;
+      gap: $space-sub;
+      font-size: calc(#{$text-standard + $text-small}/ 2);
+
+      &--submit {
+        margin-top: $space-mini;
+        justify-self: flex-end;
+        align-self: flex-end;
+        transform: translateX(-25%);
+      }
+    }
+
+    &--label {
+      width: 35%;
+    }
+
+    &--input {
+      flex: 1;
+      font-size: inherit;
+      font-family: inherit;
+      padding: $space-mini;
+    }
+
+    &--btn {
+      font-size: $text-standard;
+      font-weight: 700;
+      color: $color-main;
+      background-color: $color-fade;
+      padding: $space-mini $space-sub;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.075);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__exit {
+    position: absolute;
+    top: 1.8rem;
+    right: 2.8rem;
+
+    &--btn {
+      font-size: $text-emphasize;
+      font-weight: 700;
+      color: $color-main;
+      background-color: $color-fade;
+      padding: $space-supersmall $space-mini;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.075);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

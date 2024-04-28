@@ -1,0 +1,192 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+
+  &__greeting {
+    text-align: center;
+    text-transform: uppercase;
+    // font-size: $text-emphasize;
+    font-size: $text-small;
+    font-weight: 700;
+    // color: $color-accent;
+    padding: $space-mini $space-supersmall;
+    transform: scale(1.1);
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-mini;
+
+    &--header {
+      text-transform: uppercase;
+      letter-spacing: 1.35px;
+      font-size: calc(#{$text-emphasize + $text-big}/ 2);
+      font-weight: 900;
+      color: $color-main;
+    }
+
+    &--motto {
+      text-transform: uppercase;
+      letter-spacing: 2.75px;
+      font-size: $text-small;
+    }
+  }
+
+  &__balances {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 100%;
+    // margin-top: -$space-standard;
+    // gap: $space-sub;
+    // align-items: flex-start;
+
+    &--box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $space-small;
+      text-transform: uppercase;
+      color: $color-background;
+      font-size: $text-emphasize;
+      font-weight: 700;
+      padding: $space-supersmall 0;
+      background-color: $color-main;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+
+      &:not(:last-child) {
+        margin-bottom: $space-small;
+      }
+    }
+  }
+
+  &__exp {
+    // background-color: $color-accent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: calc(#{$space-small + $space-sub}/ 2);
+    // gap: $space-small;
+    // height: 65%;
+
+    &--category {
+      margin: 0;
+      background-color: $color-accent;
+      padding: $space-mini;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: calc(#{$space-small + $space-sub});
+      gap: $space-small;
+      font-size: $text-small;
+      font-weight: 700;
+      color: $color-background;
+      color: $color-white;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: $space-small;
+    }
+
+    &--row {
+      color: $color-main;
+      color: $color-background;
+      margin-left: $space-small;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: calc(#{$text-mini + $text-small}/ 2);
+      font-size: $text-small;
+
+      &:not(:last-child) {
+        margin-bottom: $space-supersmall;
+      }
+    }
+  }
+
+  &__total {
+    margin-top: $space-small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-small;
+    text-transform: uppercase;
+    color: $color-background;
+    font-size: $text-emphasize;
+    font-weight: 700;
+    padding: $space-supersmall 0;
+    background-color: $color-main;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+  }
+
+  &__cta {
+    margin: $space-small;
+    // position: absolute;
+    // bottom: $space-small;
+    // left: 50%;
+    // transform: translateX(-50%);
+
+    &--btn {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: $text-standard;
+      font-weight: 700;
+      color: $color-main;
+      background-color: $color-fade;
+      padding: $space-mini $space-sub;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    left: $space-sub;
+    top: $space-sub;
+
+    &--symbol {
+      height: $text-big;
+      width: $text-header-sub;
+      stroke: $color-text;
+      stroke-width: 2;
+      transform: scale(1.25);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.hide--display {
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+  background-color: $color-main;
+  background-color: $color-fade;
+  border-radius: 3px;
+  margin: 0 $space-sub;
+
+  .dashboard__exp--header {
+    color: $color-background;
+    color: $color-main;
+    font-size: calc(#{$text-small + $text-standard}/ 2);
+    font-size: $text-small;
+    letter-spacing: 1.1px;
+    margin-bottom: 0;
+  }
+  .dashboard__exp--row {
+    display: none;
+  }
+}

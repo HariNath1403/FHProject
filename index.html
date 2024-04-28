@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>The FH Project</title>
+    <script type="module" defer src="js/controller.js"></script>
+  </head>
+  <body>
+    <div class="container" id="workspace">
+      <section class="container__page chart" id="chart">
+        <div class="chart__container">
+          <div class="chart__dropdown">
+            <label for="chart__dropdown--input" class="chart__dropdown--label"
+              >Choose A Category</label
+            >
+            <select
+              name="chart__dropdown--input"
+              id="chart__dropdown--input"
+              class="chart__dropdown--input"
+            >
+              <option value="Overall">Overall Expenses</option>
+            </select>
+          </div>
+          <div class="chart__diagram">
+            <h1 class="chart__diagram--title">Overall Expenses</h1>
+            <h3 class="chart__diagram--dates">
+              From <span id="date--start">25/04/24</span> to
+              <span id="date--end">24/06/24</span>
+            </h3>
+            <div class="chart__diagram--graph">
+              <!-- <div class="chart__diagram--graph--bar" style="height: 80%">
+                <span class="chart__diagram--graph--var">Needs (RM3,500)</span>
+              </div>
+              <div class="chart__diagram--graph--bar" style="height: 30%">
+                <span class="chart__diagram--graph--var">Wants (RM1,500)</span>
+              </div>
+              <div class="chart__diagram--graph--bar" style="height: 2%">
+                <span class="chart__diagram--graph--var">Emergency (RM50)</span>
+              </div>
+              <div class="chart__diagram--graph--bar" style="height: 30%">
+                <span class="chart__diagram--graph--var">Wants (RM1,500)</span>
+              </div> -->
+            </div>
+          </div>
+          <div class="chart__exit">
+            <button class="chart__exit--btn">X</button>
+          </div>
+        </div>
+      </section>
+      <section class="container__page dashboard" id="dashboard">
+        <h3 class="dashboard__greeting">
+          <span class="dashboard__greeting--welcome"> Welcome</span>
+          <span class="dashboard__greeting--user">None</span>
+          <span class="dashboard__greeting--foot">,😁</span>
+        </h3>
+        <div class="dashboard__title">
+          <h2 class="dashboard__title--header">The FH Project</h2>
+          <h3 class="dashboard__title--motto">
+            Shaping your financial trajectory
+          </h3>
+        </div>
+        <div class="dashboard__balances">
+          <div class="dashboard__balances--box">
+            <span class="dashboard__balances--label">Income</span>
+            <span
+              class="dashboard__balances--value dashboard__balances--value--income format-currency"
+              >RM4,200.00</span
+            >
+          </div>
+          <div class="dashboard__balances--box">
+            <span class="dashboard__balances--label">Balance</span>
+            <span
+              class="dashboard__balances--value dashboard__balances--value--balance format-currency"
+              >RM919.50</span
+            >
+          </div>
+          <div class="dashboard__exp">
+            <div
+              class="dashboard__exp--category hide--display"
+              data-position="1"
+            >
+              <div class="dashboard__exp--header">
+                <h3 class="dashboard__exp--header--category">Needs Expenses</h3>
+                <h3
+                  class="dashboard__exp--header--total format-currency"
+                  id="total-exp-needs"
+                >
+                  RM9,000.00
+                </h3>
+              </div>
+              <div class="dashboard__box box-needs">
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Housing</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-housing"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Utilities</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-utilities"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Groceries</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-groceries"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Transportation</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-transportation"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Healthcare</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-healthcare"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Childcare</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-childcare"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Education</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-education"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Family Support</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-family-support"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div
+              class="dashboard__exp--category hide--display"
+              data-position="2"
+            >
+              <div class="dashboard__exp--header">
+                <h3 class="dashboard__exp--header--category">Wants Expenses</h3>
+                <h3
+                  class="dashboard__exp--header--total format-currency"
+                  id="total-exp-wants"
+                >
+                  RM9,000.00
+                </h3>
+              </div>
+              <div class="dashboard__box box-wants">
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Dining Out</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-dining-out"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Entertainment</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-entertainment"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Hobbies</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-hobbies"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Travel</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-travel"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Fashion</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-fashion"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Gadgets</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-gadgets"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Furniture</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-furniture"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Donations</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-donations"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div
+              class="dashboard__exp--category hide--display"
+              data-position="3"
+            >
+              <div class="dashboard__exp--header">
+                <h3 class="dashboard__exp--header--category">
+                  Emergency Expenses
+                </h3>
+                <h3
+                  class="dashboard__exp--header--total format-currency"
+                  id="total-exp-emergency"
+                >
+                  RM9,000.00
+                </h3>
+              </div>
+              <div class="dashboard__box box-emergency">
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Emergency Repairs</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-emergency-repairs"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Medical Emergencies</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-medical-emergencies"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Family Care</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-family-care"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Others</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-emergency-others"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div
+              class="dashboard__exp--category hide--display"
+              data-position="4"
+            >
+              <div class="dashboard__exp--header">
+                <h3 class="dashboard__exp--header--category">
+                  Savings & Investment
+                </h3>
+                <h3
+                  class="dashboard__exp--header--total format-currency"
+                  id="total-exp-savings"
+                >
+                  RM9,000.00
+                </h3>
+              </div>
+              <div class="dashboard__box box-savings">
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Emergency Fund</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-emergency-fund"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Saving Goals</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-saving-goals"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Retirement Svgs</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-retirement-savings"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+                <div class="dashboard__exp--row">
+                  <h4 class="dashboard__exp--row--sub">Investment Acc</h4>
+                  <h4
+                    class="dashboard__exp--row--exp format-currency exp-investment-account"
+                  >
+                    RM3,000.00
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard__total">
+            <h4 class="dashboard__total--header">&Sigma; Total</h4>
+            <h4 class="dashboard__total--amount format-currency">RM3,000.00</h4>
+          </div>
+        </div>
+        <div class="dashboard__cta">
+          <button class="dashboard__cta--btn">Log Exp</button>
+        </div>
+        <div class="dashboard__nav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-6 h-6 dashboard__nav--symbol"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </section>
+      <section class="container__page expenses" id="form-log-exp">
+        <div class="expenses__focus">
+          <div class="expenses__header">
+            <h2 class="expenses__header--text">Log Exp</h2>
+          </div>
+          <form class="expenses__form">
+            <div class="expenses__form--row">
+              <label for="form-expenses-date" class="expenses__form--label">
+                Date
+              </label>
+              <input
+                type="date"
+                id="form-expenses-date"
+                required
+                class="expenses__form--input"
+              />
+            </div>
+            <div class="expenses__form--row">
+              <label for="form-expenses-details" class="expenses__form--label">
+                Details
+              </label>
+              <input
+                type="text"
+                id="form-expenses-details"
+                required
+                class="expenses__form--input"
+              />
+            </div>
+            <div class="expenses__form--row">
+              <label for="form-expenses-category" class="expenses__form--label">
+                Category
+              </label>
+              <select
+                name="form-expenses-category"
+                id="form-expenses-category"
+                class="expenses__form--input"
+              >
+                <option value="" disabled selected hidden>
+                  Please select a category
+                </option>
+              </select>
+            </div>
+            <div class="expenses__form--row">
+              <label for="form-expenses-sub" class="expenses__form--label">
+                Sub &mdash; Category
+              </label>
+              <select
+                name="form-expenses-sub"
+                id="form-expenses-sub"
+                class="expenses__form--input"
+              >
+                <option value="" disabled selected hidden>
+                  Please select a sub-category
+                </option>
+              </select>
+            </div>
+            <div class="expenses__form--row">
+              <label for="form-expenses-amount" class="expenses__form--label">
+                Amount (RM)
+              </label>
+              <input
+                type="number"
+                step="0.01"
+                id="form-expenses-amount"
+                required
+                class="expenses__form--input"
+              />
+            </div>
+            <div class="expenses__form--cta">
+              <button class="expenses__form--cta--submit">Log</button
+              ><button class="expenses__form--cta--clear">Clear</button>
+            </div>
+          </form>
+          <div class="expenses__exit">
+            <button class="expenses__exit--icon">X</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="nav" id="navigation">
+      <nav class="container__page nav__page">
+        <div class="nav__logo">
+          <img src="imgs/Logo light.png" alt="FH Logo" class="nav__logo--img" />
+          <ul class="nav__list">
+            <li class="nav__row">
+              <a href="#" class="nav__link" id="link--log--exp">Log Expenses</a>
+            </li>
+            <li class="nav__row">
+              <a href="#" class="nav__link" id="link--chart"
+                >Performance Charts</a
+              >
+            </li>
+            <li class="nav__row">
+              <a href="#" class="nav__link" id="link--admin">Admin Settings</a>
+            </li>
+            <li class="nav__row">
+              <a href="whatsapp://send?phone=+60163944457" class="nav__link"
+                >Contact Support</a
+              >
+            </li>
+          </ul>
+          <div class="nav__footer">
+            <h4 class="nav__footer--text">Developed by Harivin Nathan</h4>
+          </div>
+          <div class="nav__exit">
+            <button class="nav__exit--btn">X</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container" id="admin">
+      <section class="container__page admin">
+        <div class="admin__box">
+          <form action="#" class="admin__form admin__income">
+            <h2 class="admin__form--header">Log New Income</h2>
+            <div class="admin__form--row">
+              <label for="income-date" class="admin__form--label">Date</label
+              ><input type="date" id="inc-date" class="admin__form--input" />
+            </div>
+            <div class="admin__form--row">
+              <label for="income-details" class="admin__form--label"
+                >Details</label
+              ><input type="text" id="inc-details" class="admin__form--input" />
+            </div>
+            <div class="admin__form--row">
+              <label for="income-amount " class="admin__form--label"
+                >Amount (RM)</label
+              ><input
+                type="number"
+                step="0.01"
+                id="inc-amount"
+                class="admin__form--input format-currency"
+              />
+            </div>
+            <div class="admin__form--row admin__form--row--submit">
+              <button class="admin__form--btn admin__form--btn--income">
+                Log
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="admin__box">
+          <form action="#" class="admin__form admin__dates">
+            <h2 class="admin__form--header">Configure Dates</h2>
+            <div class="admin__form--row">
+              <label for="income-date" class="admin__form--label"
+                >Start Date</label
+              ><input
+                type="date"
+                class="admin__form--input admin__form--input--start"
+              />
+            </div>
+            <div class="admin__form--row">
+              <label for="income-details" class="admin__form--label"
+                >End Date</label
+              ><input
+                type="date"
+                class="admin__form--input admin__form--input--end"
+              />
+            </div>
+            <div class="admin__form--row">
+              <label for="income-amount " class="admin__form--label"
+                >Login Code</label
+              ><input
+                type="password"
+                class="admin__form--input admin__form--input--password format-currency"
+              />
+            </div>
+            <div class="admin__form--row admin__form--row--submit">
+              <button class="admin__form--btn admin__form--btn--dates">
+                Update
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="admin__exit">
+          <button class="admin__exit--btn">X</button>
+        </div>
+      </section>
+    </div>
+    <aside id="login">
+      <div class="login">
+        <div class="login__logo">
+          <img src="imgs/Logo Red.png" alt="FH Logo" />
+          <!-- <img src="imgs/Logo Colored.png" alt="FH Logo" /> -->
+        </div>
+        <div class="login__title">
+          <h4 class="login__title--preface">The</h4>
+          <h1 class="login__title--main">FH Project</h1>
+          <h3 class="login__title--motto">Shaping your financial trajectory</h3>
+        </div>
+        <div class="login__userform">
+          <input
+            type="password"
+            class="login__userform--password"
+            placeholder="Input password..."
+          />
+          <button class="login__userform--btn">Login</button>
+        </div>
+        <div class="login__footer">
+          <h4 class="login__footer--text">Developed by Harivin Nathan</h4>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>

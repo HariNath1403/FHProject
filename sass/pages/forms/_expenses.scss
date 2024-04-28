@@ -1,0 +1,95 @@
+.expenses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background-color: rgba($color-black, 0.65);
+
+  &__focus {
+    color: $color-accent;
+    position: relative;
+    background-color: $color-main;
+    width: 100%;
+    padding: $space-standard $space-small;
+    margin-bottom: $space-big;
+  }
+
+  &__header {
+    transform: skewX(-15deg);
+    margin-top: $space-small;
+    &--text {
+      color: inherit;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: $text-header-main;
+      font-weight: 900;
+      letter-spacing: 2.4px;
+    }
+  }
+
+  &__form {
+    margin-top: $space-sub;
+    padding: $space-small $space-supersmall;
+    display: flex;
+    flex-direction: column;
+    gap: calc(#{$space-gap + $space-standard}/ 2);
+
+    &--row {
+      font-size: $text-standard;
+      font-weight: 700;
+      display: flex;
+      gap: $space-small;
+      align-items: center;
+      width: 100%;
+    }
+
+    &--label {
+      width: 30%;
+    }
+
+    &--input {
+      font-family: inherit;
+      font-size: inherit;
+      color: $color-main;
+      background-color: $color-accent;
+      border: none;
+      padding: $space-supersmall;
+      flex: 1;
+    }
+
+    &--cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $space-widegap;
+      margin-top: $space-sub;
+
+      button {
+        font-size: $text-emphasize;
+        font-weight: 700;
+        color: $color-main;
+        background-color: $color-fade;
+        padding: $space-mini $space-gap;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.075);
+      }
+    }
+  }
+
+  &__exit {
+    position: absolute;
+    top: $space-small;
+    right: $space-sub;
+
+    &--icon {
+      font-size: $text-emphasize;
+      font-weight: 700;
+      color: $color-main;
+      background-color: $color-fade;
+      padding: $space-supersmall $space-mini;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.075);
+    }
+  }
+}

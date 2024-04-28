@@ -1,0 +1,254 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 47.5%; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #732027;
+  letter-spacing: 1.2px; }
+
+body {
+  background-color: #faf2eb; }
+
+.container {
+  background-color: #fad9cc;
+  max-width: 52.5rem;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex; }
+  .container__page {
+    flex-shrink: 0;
+    height: 100vh;
+    width: 100%;
+    border: 0.5rem solid #bf3641;
+    position: relative;
+    transition: all 0.3s; }
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  .dashboard__greeting {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.2rem 0.6rem;
+    transform: scale(1.1); }
+  .dashboard__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem; }
+    .dashboard__title--header {
+      text-transform: uppercase;
+      letter-spacing: 1.35px;
+      font-size: calc(6rem/ 2);
+      font-weight: 900;
+      color: #bf3641; }
+    .dashboard__title--motto {
+      text-transform: uppercase;
+      letter-spacing: 2.75px;
+      font-size: 1.6rem; }
+  .dashboard__balances {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 100%; }
+    .dashboard__balances--box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      text-transform: uppercase;
+      color: #fad9cc;
+      font-size: 2.4rem;
+      font-weight: 700;
+      padding: 0.6rem 0;
+      background-color: #bf3641;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+      .dashboard__balances--box:not(:last-child) {
+        margin-bottom: 1.8rem; }
+  .dashboard__exp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: calc(4.6rem/ 2); }
+    .dashboard__exp--category {
+      margin: 0;
+      background-color: #e69522;
+      padding: 1.2rem; }
+      .dashboard__exp--category:hover {
+        cursor: pointer; }
+    .dashboard__exp--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: calc(4.6rem);
+      gap: 1.8rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fad9cc;
+      color: #faf2eb;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem; }
+    .dashboard__exp--row {
+      color: #bf3641;
+      color: #fad9cc;
+      margin-left: 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: calc(2.8rem/ 2);
+      font-size: 1.6rem; }
+      .dashboard__exp--row:not(:last-child) {
+        margin-bottom: 0.6rem; }
+  .dashboard__total {
+    margin-top: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+    text-transform: uppercase;
+    color: #fad9cc;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 0.6rem 0;
+    background-color: #bf3641;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+  .dashboard__cta {
+    margin: 1.8rem;
+    text-align: center; }
+    .dashboard__cta--btn {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #bf3641;
+      background-color: #f29f80;
+      padding: 1.2rem 2.8rem;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+  .dashboard__nav {
+    position: absolute;
+    left: 2.8rem;
+    top: 2.8rem; }
+    .dashboard__nav--symbol {
+      height: 3.6rem;
+      width: 4.8rem;
+      stroke: #732027;
+      stroke-width: 2;
+      transform: scale(1.25); }
+    .dashboard__nav:hover {
+      cursor: pointer; }
+
+.hide--display {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  background-color: #bf3641;
+  background-color: #f29f80;
+  border-radius: 3px;
+  margin: 0 2.8rem; }
+  .hide--display .dashboard__exp--header {
+    color: #fad9cc;
+    color: #bf3641;
+    font-size: calc(3.6rem/ 2);
+    font-size: 1.6rem;
+    letter-spacing: 1.1px;
+    margin-bottom: 0; }
+  .hide--display .dashboard__exp--row {
+    display: none; }
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 65%;
+  background-color: rgba(255, 69, 0, 0.5);
+  transform: translateX(-100%);
+  transition: all 0.3s; }
+
+.expenses {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .expenses__focus {
+    color: #e69522;
+    position: relative;
+    background-color: #bf3641;
+    width: 100%;
+    padding: 4.8rem 1.8rem;
+    margin-bottom: 12.8rem; }
+  .expenses__header {
+    transform: skewX(-15deg);
+    margin-top: 1.8rem; }
+    .expenses__header--text {
+      color: inherit;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 6.4rem;
+      font-weight: 900;
+      letter-spacing: 2.4px; }
+  .expenses__form {
+    margin-top: 2.8rem;
+    padding: 1.8rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: calc(8.4rem/ 2); }
+    .expenses__form--row {
+      font-size: 2rem;
+      font-weight: 700;
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+      width: 100%; }
+    .expenses__form--label {
+      width: 30%; }
+    .expenses__form--input {
+      font-family: inherit;
+      font-size: inherit;
+      color: #bf3641;
+      background-color: #e69522;
+      border: none;
+      padding: 0.6rem;
+      flex: 1; }
+    .expenses__form--cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8.4rem;
+      margin-top: 2.8rem; }
+      .expenses__form--cta button {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #bf3641;
+        background-color: #f29f80;
+        padding: 1.2rem 3.6rem;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.075); }
+  .expenses__exit {
+    position: absolute;
+    top: 1.8rem;
+    right: 2.8rem; }
+    .expenses__exit--icon {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #bf3641;
+      background-color: #f29f80;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.075); }

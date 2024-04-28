@@ -1,0 +1,102 @@
+.chart {
+  // transform: translateX(-100%);
+  background-color: $color-background;
+  z-index: 2;
+
+  &__page {
+    position: relative;
+  }
+  &__dropdown {
+    text-align: center;
+    margin: $space-standard;
+    display: flex;
+    flex-direction: column;
+    gap: $space-small;
+
+    &--label {
+      font-size: $text-standard;
+    }
+
+    &--input {
+      padding: $space-supersmall $space-mini;
+      font-size: $text-standard;
+      font-family: inherit;
+      color: $color-main;
+    }
+  }
+  &__diagram {
+    margin: $space-standard $space-small;
+    padding: $space-standard $space-mini;
+    background-color: $color-main;
+
+    &--title {
+      text-align: center;
+      font-size: calc(#{$text-big + $text-emphasize}/ 2);
+      font-weight: 500;
+      letter-spacing: 2.4px;
+      color: $color-background;
+      text-transform: uppercase;
+    }
+
+    &--dates {
+      text-align: center;
+      font-size: $text-standard;
+      font-weight: 300;
+      color: $color-background;
+      margin-top: $space-mini;
+    }
+
+    &--graph {
+      // margin-top: $space-standard;
+      height: 50rem;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: calc(#{$space-mini + $space-supersmall}/ 2);
+      // overflow-x: scroll;
+      // overflow-y: hidden;
+
+      &--bar {
+        padding: $space-margin 0;
+        background-color: $color-background;
+        color: $color-main;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        // max-width: 20rem;
+        // transform: scaleX(0.85);
+      }
+
+      &--var {
+        font-size: $text-mini;
+        text-align: center;
+        line-height: 1.5;
+        transform: rotate(270deg) translateX(-10%) scale(1.1);
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__exit {
+    position: absolute;
+    top: $space-sub;
+    right: $space-sub;
+
+    &--btn {
+      font-size: $text-emphasize;
+      font-weight: 700;
+      color: $color-background;
+      background-color: $color-main;
+      padding: $space-supersmall $space-mini;
+      border: none;
+      border-radius: 3px;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.075);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+#login {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  max-width: $max-width;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.3s;
+  transform: translateX(-50%);
+  display: block;
+}
+
+.login {
+  // background-color: rgba($color-white, 0.75);
+  background-image: linear-gradient(
+    to bottom,
+    rgba($color-white, 0.85) 30%,
+    rgba($color-background, 0.95),
+    rgba($color-white, 0.75)
+  );
+  backdrop-filter: blur(0.5rem);
+  height: 100vh;
+  width: 100%;
+  // border: 0.5rem solid $color-main;
+  position: relative;
+
+  &__logo {
+    width: calc(#{$space-big} * 3.2);
+    height: calc(#{$space-big} * 3.2);
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: -$space-sub;
+
+    &--preface {
+      text-transform: uppercase;
+      color: $color-main;
+      font-size: $text-standard;
+      font-weight: 700;
+    }
+
+    &--main {
+      text-transform: uppercase;
+      color: $color-main;
+      font-size: $text-header-main;
+      font-weight: 900;
+      letter-spacing: 4.8px;
+    }
+    &--motto {
+      margin-top: $space-sub;
+      text-transform: uppercase;
+      color: $color-text;
+      font-size: $text-standard;
+      font-weight: 300;
+      letter-spacing: 6.8px;
+      line-height: 1.8;
+    }
+  }
+
+  &__userform {
+    margin-top: $space-standard;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(#{$space-standard + $space-gap}/ 2);
+
+    &--password {
+      padding: $space-mini $space-sub;
+      font-family: inherit;
+      color: $color-background;
+      letter-spacing: 1.2px;
+      background-color: $color-main;
+      border: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.05);
+      font-size: $text-emphasize;
+
+      &::placeholder {
+        font-family: inherit;
+        color: inherit;
+      }
+    }
+
+    &--btn {
+      padding: $space-small $space-sub;
+      letter-spacing: 1.2px;
+      font-size: $text-emphasize;
+      font-weight: 900;
+      text-transform: uppercase;
+      background-color: $color-accent;
+      color: $color-main;
+      border: none;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: $space-standard;
+    left: 30%;
+
+    transform: translateX(-20%);
+    &--text {
+      text-transform: uppercase;
+      font-size: $text-small;
+      font-weight: 300;
+      letter-spacing: 2.1px;
+    }
+  }
+}
