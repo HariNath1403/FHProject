@@ -369,9 +369,7 @@ body {
       width: 100%;
       display: flex;
       align-items: flex-end;
-      justify-content: space-between;
-      gap: calc(1.8rem/ 2);
-      gap: calc(0.6rem * 0.75); }
+      justify-content: space-between; }
       .chart__diagram--graph--bar {
         padding: 5.6rem 0;
         background-color: #fad9cc;
@@ -380,7 +378,7 @@ body {
         justify-content: center;
         align-items: flex-end; }
       .chart__diagram--graph--var {
-        font-size: 1.2rem;
+        font-size: calc(2rem/ 2);
         text-align: center;
         line-height: 1.5;
         transform: rotate(270deg) translateX(-10%) scale(1.1);

@@ -53,12 +53,12 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      gap: calc(#{$space-mini + $space-supersmall}/ 2);
-      gap: calc(#{$space-supersmall} * 0.75);
+      // gap: calc(#{$space-mini + $space-supersmall}/ 2);
       // overflow-x: scroll;
       // overflow-y: hidden;
 
       &--bar {
+        // flex: 0;
         padding: $space-margin 0;
         background-color: $color-background;
         color: $color-main;
@@ -70,7 +70,8 @@
       }
 
       &--var {
-        font-size: $text-mini;
+        // font-size: $text-mini;
+        font-size: calc(#{$text-supersmall + $text-mini}/ 2);
         text-align: center;
         line-height: 1.5;
         transform: rotate(270deg) translateX(-10%) scale(1.1);
