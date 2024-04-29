@@ -40,8 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  overflow-y: scroll; }
+  position: relative; }
   .dashboard__greeting {
     text-align: center;
     text-transform: uppercase;
@@ -371,7 +370,8 @@ body {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      gap: calc(1.8rem/ 2); }
+      gap: calc(1.8rem/ 2);
+      gap: calc(0.6rem * 0.75); }
       .chart__diagram--graph--bar {
         padding: 5.6rem 0;
         background-color: #fad9cc;
@@ -486,7 +486,8 @@ body {
   padding: 7.2rem 3.6rem 5.6rem;
   display: flex;
   flex-direction: column;
-  gap: 5.6rem; }
+  gap: 5.6rem;
+  border: none !important; }
   .admin__box {
     background-color: #bf3641;
     color: #fad9cc; }

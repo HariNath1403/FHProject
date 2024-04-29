@@ -54,6 +54,7 @@
       align-items: flex-end;
       justify-content: space-between;
       gap: calc(#{$space-mini + $space-supersmall}/ 2);
+      gap: calc(#{$space-supersmall} * 0.75);
       // overflow-x: scroll;
       // overflow-y: hidden;
 
